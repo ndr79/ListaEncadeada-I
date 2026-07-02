@@ -39,4 +39,11 @@ int vazia(Lista* l);
 // Pós-condição: os elementos da lista são impressos no console
 void imprimir(Lista* l);
 
+// Remove um nó da lista
+// Entrada: lista e elemento a ser removido
+// Retorno: lista modificada
+// Pré-condição: nenhuma
+// Pós-condição: um elemento é removido da lista
+Lista* remover(Lista* l, TipoItem info);
+
 #endif /* listaEncadeada_h */

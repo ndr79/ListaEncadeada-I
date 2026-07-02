@@ -13,6 +13,9 @@ int main(int argc, const char * argv[]) {
 
     imprimir(l);
 
+    l = remover(l, 12);
+    imprimir(l);
+
     liberar(l);
     l = NULL;
 
