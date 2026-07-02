@@ -86,3 +86,53 @@ Lista* remover(Lista* l, TipoItem info) {
         printf("Elemento não encontrado.\n");
     return l;
 }
+
+// Inverte uma lista
+// Entrada: lista
+// Retorno: lista invertida
+// Pré-condição: nenhuma
+// Pós-condição: a list original não é alterada
+Lista* inverter(Lista* l) {
+    if(!vazia(l)) {
+        Lista* aux = NULL;
+        while(l != NULL) {
+            aux = inserir(aux, l->info);
+            l = l->prox;
+        }
+        return aux;
+    }
+    return NULL;
+}
+
+// Concatena duas lista
+// Entrada: listas a serem concatenadas
+// Retorno: lista resultante da concatenação
+// Pré-condição: nenhuma
+// Pós-condição: listas originais não são alteradas
+Lista* concatenar(Lista* l1, Lista* l2) {
+    Lista* nova = NULL;
+    Lista* aux;
+    Lista* inv;
+
+    // Copia a primeira lista
+    inv = inverter(l1);
+    aux = inv;
+
+    while(aux != NULL) {
+        nova = inserir(nova, aux->info);
+        aux = aux->prox;
+    }
+    liberar(inv);
+
+    // Copia a segunda lista
+    inv = inverter(l2);
+    aux = inv;
+
+    while(aux != NULL) {
+        nova = inserir(nova, aux->info);
+        aux = aux->prox;
+    }
+    liberar(inv);
+
+    return nova;
+}

@@ -46,4 +46,18 @@ void imprimir(Lista* l);
 // Pós-condição: um elemento é removido da lista
 Lista* remover(Lista* l, TipoItem info);
 
+// Inverte uma lista
+// Entrada: lista
+// Retorno: lista invertida
+// Pré-condição: nenhuma
+// Pós-condição: a list original não é alterada
+Lista* inverter(Lista* l1);
+
+// Concatena duas lista
+// Entrada: listas a serem concatenadas
+// Retorno: lista resultante da concatenação
+// Pré-condição: nenhuma
+// Pós-condição: listas originais não são alteradas
+Lista* concatenar(Lista* l1, Lista* l2);
+
 #endif /* listaEncadeada_h */
