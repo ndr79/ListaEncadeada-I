@@ -35,6 +35,11 @@ int main(int argc, const char * argv[]) {
     l3 = concatenar(l, l2);
     imprimir(l3);
 
+    Lista* l4 = NULL;
+
+    l4 = intercalar(l, l2);
+    imprimir(l4);
+
     liberar(l);
     l = NULL;
 
@@ -46,6 +51,9 @@ int main(int argc, const char * argv[]) {
 
     liberar(l3);
     l3 = NULL;
+
+    liberar(l4);
+    l4 = NULL;
 
     printf("\n");
     return 0;

@@ -136,3 +136,27 @@ Lista* concatenar(Lista* l1, Lista* l2) {
 
     return nova;
 }
+
+// Intercala duas lista
+// Entrada: listas a serem intercaladas
+// Retorno: lista resultante da intercalação
+// Pré-condição: nenhuma
+// Pós-condição: listas originais não são alteradas
+Lista* intercalar(Lista* l1, Lista* l2) {
+    Lista* nova = NULL;
+    Lista* aux;
+
+    while(l1 != NULL || l2 != NULL) {
+        if(l1 != NULL) {
+            nova = inserir(nova, l1->info);
+            l1 = l1->prox;
+        }
+        if(l2 != NULL) {
+            nova = inserir(nova, l2->info);
+            l2 = l2->prox;
+        }
+    }
+    aux = inverter(nova);
+    liberar(nova);
+    return aux;
+}

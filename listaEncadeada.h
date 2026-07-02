@@ -60,4 +60,11 @@ Lista* inverter(Lista* l1);
 // Pós-condição: listas originais não são alteradas
 Lista* concatenar(Lista* l1, Lista* l2);
 
+// Intercala duas lista
+// Entrada: listas a serem intercaladas
+// Retorno: lista resultante da intercalação
+// Pré-condição: nenhuma
+// Pós-condição: listas originais não são alteradas
+Lista* intercalar(Lista* l1, Lista* l2);
+
 #endif /* listaEncadeada_h */
