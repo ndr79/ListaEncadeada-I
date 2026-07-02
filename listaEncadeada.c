@@ -33,3 +33,30 @@ void liberar(Lista* l) {
         free(aux);
     }
 }
+
+// Verifica se uma lista é vazia
+// Entrada: lista
+// Retorno: 1 se a lista é vazia ou 0 caso contrário
+// Pré-condição: nenhuma
+// Pós-condição: nenhuma
+int vazia(Lista* l) {
+    return (l == NULL);
+}
+
+// Imprime no console todos elementos da lista
+// Entrada: lista
+// Retorno: nenhum
+// Pré-condição: nenhuma
+// Pós-condição: os elementos da lista são impressos no console
+void imprimir(Lista* l) {
+    if(!vazia(l)) {
+        printf("[ ");
+        while(l != NULL) {
+            printf("%d ", l->info);
+            l = l->prox;
+        }
+        printf("]\n");
+    }
+    else 
+        printf("Lista vazia.\n");
+}
